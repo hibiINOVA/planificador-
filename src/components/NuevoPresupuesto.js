@@ -1,17 +1,7 @@
-import { View, Text, TextInput, Pressable, StyleSheet, Alert } from 'react-native'
-import React, { useState } from 'react'
+import { View, Text, TextInput, Pressable, StyleSheet } from 'react-native'
+import React from 'react'
 
-const NuevoPresupuesto = () => {
-  const [presupuesto, setPresupuesto] = useState('')
-
-  const handleSubmit = () => {
-    if (presupuesto > 0) {
-      console.log('Es un presupuesto valido')
-    } else {
-      Alert.alert('Error', 'Presupuesto no valido')
-    }
-  }
-
+const NuevoPresupuesto = ({presupuesto, setPresupuesto, handlePresupuesto}) => {
   return (
     <View style={styles.contenedor}>
       <Text style={styles.label}>Agregar presupuesto</Text>
@@ -23,7 +13,7 @@ const NuevoPresupuesto = () => {
         onChangeText={setPresupuesto}
         style={styles.input}
       />
-      <Pressable style={styles.boton} onPress={handleSubmit}>
+      <Pressable style={styles.boton} onPress={handlePresupuesto}>
         <Text style={styles.btnTexto}>Agregar Presupuesto</Text>
       </Pressable>
     </View>
