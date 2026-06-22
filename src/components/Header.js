@@ -4,16 +4,17 @@ import React from 'react'
 const Header = () => {
   return (
     <View>
-      <Text style={styles.Texto}>Planificador</Text>
+      <Text style={styles.Texto}>Planificador de Gastos</Text>
     </View>
   )
 }
 const styles = StyleSheet.create({
   Texto: {
     textAlign: 'center',
-    fontSize: 20,
+    fontSize: 22,
     color: '#fff',
     textTransform: 'uppercase',
+    fontWeight: 'bold',
     paddingTop: 20,
   },
 })
